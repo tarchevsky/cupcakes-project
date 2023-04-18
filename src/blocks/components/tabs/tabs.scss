@@ -1,0 +1,56 @@
+.tabs {
+  margin-inline: -50px;
+
+  &-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    border-bottom: 1px solid $disabled;
+
+    &__item {
+      display: inline-block;
+      color: $disabled;
+      padding: $ind;
+      margin-inline-end: -6px;
+      cursor: pointer;
+      transition: all $transition;
+
+      &:hover {
+        color: $contrast-color;
+      }
+
+      h3 {
+        margin-block: 0;
+      }
+
+      &--active {
+        color: $contrast-color;
+        font-weight: 600;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &-content {
+    &__item {
+      display: none;
+      padding: 0 50px;
+      transition: all 0.9s;
+
+      //&--active {
+      //  background-color: $active-color;
+      //}
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs {
+    &-item {
+      padding: $indmin;
+    }
+  }
+}

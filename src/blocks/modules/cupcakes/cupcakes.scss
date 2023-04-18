@@ -1,0 +1,33 @@
+.cupcakes {
+	&-item {
+		display: grid;
+		justify-items: center;
+		padding: $ind;
+		box-shadow: -3px 0px 36px 0px rgba(0, 0, 0, 0.1);
+		border-radius: 20px;
+
+		&__img {
+			width: 250px;
+
+			img {
+				width: 100%;
+				height: 250px;
+				border-radius: 500px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.cupcakes {
+		&-item {
+			&__img {
+				width: 190px;
+
+				img {
+					height: 190px;
+				}
+			}
+		}
+	}
+}
