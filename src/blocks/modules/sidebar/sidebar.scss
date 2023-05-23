@@ -1,14 +1,30 @@
 .sidebar {
-  position: relative;
-  height: 100%;
-  margin-block: 0;
-  background-color: $white;
-  border-right: 4px solid #000;
+	position: relative;
+	height: 100%;
+	margin-block: 0;
+	background-color: $white;
+	border-right: 4px solid #000;
 
-  &__inner {
-    position: sticky;
-    inset-block-start: 0;
-    padding: 0 $ind;
-    height: 100vh;
-  }
+	&__inner {
+		position: sticky;
+		inset-block-start: 0;
+		padding: 0 $ind;
+		height: 100vh;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.sidebar {
+		position: absolute;
+		z-index: 100;
+		height: auto;
+		width: 100%;
+		background-color: revert;
+		border-right: 0;
+		&__inner {
+			position: relative;
+			padding: 0;
+			height: auto;
+		}
+	}
 }

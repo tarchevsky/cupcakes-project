@@ -1,9 +1,9 @@
 extends layouts/default
 
 block variables
-    - const title = 'Новый сайт'
-    - const description = 'Дескрипшен - это краткое описание сайта, страницы, которое выводится в поиске в виде сниппета под названием сайта. Очень важно как для доступности сайта, так и для стандартов поисковых систем'
-    - const keywords = 'ключевые, слова, можно словосочетаниями, короткими ёмкими фразами, нужно для поисковых систем, но едва ли, но пусть будет'
+    - const title = 'katyasugarsugar | капкейки, зефир на заказ для частных и корпоративных клиентов'
+    - const description = 'Привет! Меня зовут Катя и я - частный кондитер. Я делаю капкейки, зефир. Капкейки дизайнерские, капкейки с ягодами, принтами. Зефир праздничный с разным оформлением. Все сладости, которые вы получаете, я красиво упаковываю и доставляю в то время, когда Вам удобно'
+    - const keywords = 'капкейки, зефир, cupcakes, zephyr'
 
 block header
     include ../blocks/modules/header/header
@@ -11,9 +11,11 @@ block header
 block content
     .content__inner
         include ../blocks/modules/main/main
-        include ../blocks/modules/cupcakes/cupcakes
-        include ../blocks/modules/cups/cups
-        include ../blocks/modules/marshmallow/marshmallow
+        include ../blocks/modules/sections/sections
+        //- include ../blocks/modules/cupcakes/cupcakes
+        //- include ../blocks/modules/cups/cups
+        //- include ../blocks/modules/marshmallow/marshmallow
+        include ../blocks/modules/delivery/delivery
         include ../blocks/modules/footer/footer
 
 block scripts

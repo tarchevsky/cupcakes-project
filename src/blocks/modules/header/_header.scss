@@ -60,10 +60,15 @@
 	img {
 		height: 180px;
 	}
+
+	p {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 768px) {
 	.header {
+		height: auto;
 		&-menu {
 			position: fixed;
 			z-index: 100;
@@ -107,6 +112,19 @@
 					opacity: 1;
 				}
 			}
+		}
+		&-socials {
+			display: none;
+		}
+	}
+	.logo {
+		img {
+			display: none;
+		}
+		p {
+			display: block;
+			padding-inline-start: 2vw;
+			color: #fff;
 		}
 	}
 }
